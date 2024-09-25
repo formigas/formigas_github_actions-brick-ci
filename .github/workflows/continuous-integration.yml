@@ -58,7 +58,7 @@ jobs:
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
           cache: true
-      - name: Setup Android Keystore
+      - name: Setup Keystore
         run: echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 --decode > ./android/app/${{ env.KEYSTORE_FILENAME }}
       - name: Clean
         run: flutter clean
